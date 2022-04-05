@@ -80,7 +80,7 @@ class QuickBluePlugin: FlutterPlugin, MethodCallHandler, EventChannel.StreamHand
         }
         val gatt = bluetoothManager.adapter
                 .getRemoteDevice(deviceId)
-                .connectGatt(context, false, gattCallback)
+                .connectGatt(context, false, gattCallback, 2)
         knownGatts.add(gatt)
         result.success(null)
         // TODO connecting
